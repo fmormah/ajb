@@ -21,9 +21,6 @@
         height: 300px;
         display: none;
         background-image: url('../../../public/images/space-geezer-2.png');
-        @media (max-width: $large-screen-breakpoint) {
-            display: none;
-        }
     }
 
     &.is-sole-variation {
@@ -39,6 +36,9 @@
         max-height: 9999999px;
         &:after{
             display: block;
+            @media (max-width: $large-screen-breakpoint) {
+                display: none;
+            }
         }
     }
 
