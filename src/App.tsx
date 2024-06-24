@@ -17,6 +17,7 @@ function App() {
         </h3>
       </Hero>
       <main className="content">
+        <p className="h1">Explore our strategies</p>
         <section className="strategy-buttons-container">
           {FUNDS.map((fund, index) => (
             <StrategyButton
