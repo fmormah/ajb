@@ -10,6 +10,22 @@
     overflow: hidden;
     @include standard-body-font($size: 16px);
 
+    &:after{
+        content: "";
+        z-index: 6;
+        background-size: 100%;
+        left: -50px;
+        bottom: -50px;
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        display: none;
+        background-image: url('../../../public/images/space-geezer-2.png');
+        @media (max-width: $large-screen-breakpoint) {
+            display: none;
+        }
+    }
+
     &.is-sole-variation {
         margin-top: -25px;
     }
@@ -21,6 +37,9 @@
     &.active {
         padding: 25px;
         max-height: 9999999px;
+        &:after{
+            display: block;
+        }
     }
 
     .doc-container {
