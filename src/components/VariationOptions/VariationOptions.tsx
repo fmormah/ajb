@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import "./VariationOptions.scss";
 import { useInvestment } from "../../context/investmentDiscoveryContext";
-import { StrategVariation } from "../../types";
+import { StrategVariation, defaultEmptyData } from "../../types";
 import cn from "classnames";
 
 const VariationOptions: React.FC = () => {
@@ -11,6 +11,7 @@ const VariationOptions: React.FC = () => {
   const fetchData = useCallback(
     async (url: string, label: string) => {
       dispatch({ type: "setFundingOption", payload: label });
+      dispatch({ type: "setInvestmentData", payload: defaultEmptyData });
       setTimeout(() => {
         document.querySelector(".information-console")?.scrollIntoView({
           behavior: "smooth",
