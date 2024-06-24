@@ -133,7 +133,8 @@ const InformationConsole: React.FC<InformationConsoleProps> = ({
               responsive: true,
               plugins: {
                 legend: {
-                  position: "top",
+                  position: "bottom",
+                  maxWidth: 3,
                 },
                 title: {
                   display: true,
