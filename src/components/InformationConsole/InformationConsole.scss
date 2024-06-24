@@ -1,0 +1,193 @@
+@import '../../variables.scss';
+
+.information-console {
+    border-radius: 10px;
+    padding: 0 25px;
+    background-color: $ajb-white;
+    margin-top: 40px;
+    box-shadow: 0px 10px 20px #000;
+    max-height: 0px;
+    overflow: hidden;
+    @include standard-body-font($size: 16px);
+
+    &.is-sole-variation {
+        margin-top: -25px;
+    }
+
+    h3 {
+        font-size: 28px;
+    }
+
+    &.active {
+        padding: 25px;
+        max-height: 9999999px;
+    }
+
+    .doc-container {
+        button {
+            text-align: center;
+            margin: 0 5px;
+            padding: 15px 45px 15px 15px;
+            border: 2px solid $ajb-black;
+            background-color: $ajb-white;
+            color: $ajb-black;
+            background-color: $ajb-white;
+            border-radius: 100px;
+            transition: 0.2s;
+            cursor: pointer;
+            background-image: url('../../../public/images/doc.png');
+            background-size: 18px;
+            background-repeat: no-repeat;
+            background-position: top 15px right 15px;
+
+            &:hover {
+                filter: invert(1);
+            }
+        }
+    }
+
+    .information-console-top {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+
+        @media (min-width: $large-screen-breakpoint) {
+            flex-direction: row;
+        }
+
+        .information-console-top-info {
+            flex-grow: 2;
+        }
+    }
+
+    .information-console-bottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 50px;
+        margin-top: 25px;
+        padding-top: 25px;
+        border-top: 2px solid $ajb-black;
+
+        h3 {
+            text-align: center;
+        }
+
+        @media (min-width: $large-screen-breakpoint) {
+            flex-direction: row;
+        }
+
+        .information-assets-info,
+        .information-holding-info {
+            flex-grow: 2;
+            max-width: 400px;
+
+            @media (max-width: $large-screen-breakpoint) {
+                max-width: 100%;
+
+                canvas {
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+
+    .data-table {
+        th {
+            text-align: left;
+        }
+
+        @media (max-width: $large-screen-breakpoint) {
+            margin: 0 auto;
+        }
+    }
+
+    .invest-cta {
+        display: block;
+        text-align: center;
+        margin: 50px auto;
+        text-decoration: none;
+        color: $ajb-white;
+        background-color: $ajb-blue-light;
+        border: 2px solid $ajb-blue-light;
+        padding: 15px 25px;
+        border-radius: 100px;
+        font-weight: bold;
+        max-width: 150px;
+        transition-duration: 0.2s;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $ajb-white;
+            color: $ajb-blue-light;
+        }
+    }
+}
+
+.error-section{
+    img{
+        width: 300px;
+        display: block;
+        margin: 25px auto;
+    }
+    p{
+        font-size: 28px;
+        color: #f00;
+        text-align: center;
+    }
+}
+
+.loading-shimmer {
+    height: 50px;
+    width: 50%;
+    margin-bottom: 20px;
+
+    background: #f6f7f8;
+    background-image: linear-gradient(to right, #f6f7f8 0%, #edeef1 20%, #f6f7f8 40%, #f6f7f8 100%);
+    background-repeat: no-repeat;
+    background-size: 800px 104px;
+    display: inline-block;
+    position: relative;
+
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeholderShimmer;
+    animation-timing-function: linear;
+
+
+    &.p1 {
+        height: 27px;
+        width: 75%;
+    }
+
+    &.p2 {
+        height: 27px;
+        width: 50%;
+    }
+
+    &.p3 {
+        height: 27px;
+        width: 75%;
+    }
+
+    &.p4 {
+        height: 27px;
+        width: 65%;
+    }
+
+    &.p5 {
+        height: 120px;
+        width: 80%;
+    }
+}
+
+@keyframes placeholderShimmer {
+    0% {
+        background-position: -468px 0;
+    }
+
+    100% {
+        background-position: 468px 0;
+    }
+}

@@ -1,0 +1,73 @@
+@import "../../variables.scss";
+
+.risk-rating-component {
+  max-width: 320px;
+  @media (max-width: $large-screen-breakpoint) {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+.risk-rating-tool {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.risk-rating-tool-values {
+  display: flex;
+  max-width: 320px;
+}
+
+.risk-rating-tool-values td {
+  flex: 1;
+  height: 20px;
+  opacity: 0.75;
+  position: relative;
+  z-index: 1;
+  &:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  &:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+}
+
+.risk-rating-tool-values td.active {
+  opacity: 1;
+  transform: scale(1.5);
+  border-radius: 10px;
+  z-index: 2;
+}
+
+.risk-rating-tool-values--1 {
+  background-color: #4caf50;
+}
+.risk-rating-tool-values--2 {
+  background-color: #009688;
+}
+.risk-rating-tool-values--3 {
+  background-color: #00bcd4;
+}
+.risk-rating-tool-values--4 {
+  background-color: #03a9f4;
+}
+.risk-rating-tool-values--5 {
+  background-color: #2196f3;
+}
+.risk-rating-tool-values--6 {
+  background-color: #3f51b5;
+}
+.risk-rating-tool-values--7 {
+  background-color: #673ab7;
+}
+.risk-rating-tool-values--8 {
+  background-color: #9c27b0;
+}
+.risk-rating-tool-values--9 {
+  background-color: #e91e63;
+}
+.risk-rating-tool-values--10 {
+  background-color: #f44336;
+}

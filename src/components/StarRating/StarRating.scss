@@ -1,0 +1,19 @@
+@import '../../variables.scss';
+
+.rating-container{
+  min-width: 320px;
+  @media (max-width: $large-screen-breakpoint) {
+    text-align: center;
+  }
+}
+
+.rating-star{
+  font-size: 30px;
+  display: inline-block;
+  margin-top:-10px;
+  text-shadow: 0 0 10px $ajb-blue-alt;
+  color: $ajb-blue-light;
+  &.empty{
+    opacity: 0.2;
+  }
+}

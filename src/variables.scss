@@ -1,0 +1,18 @@
+$ajb-blue: #003777;
+$ajb-blue-light: #2196f3;
+$ajb-blue-alt: #0fff;
+$ajb-black: #222;
+$ajb-white: #fff;
+$ajb-green-lite: #5BB543;
+$ajb-green-dark: #007200;
+$ajb-off-white: #f2f2ea;
+$large-screen-breakpoint: 921px;
+
+
+@mixin standard-body-font($weight: normal, $color: $ajb-black, $size: 16px) {
+    color: $color;
+    font-size: $size;
+    letter-spacing: 0;
+    font-weight: $weight;
+    line-height: 1.8;
+}
